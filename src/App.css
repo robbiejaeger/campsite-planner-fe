@@ -1,8 +1,4 @@
-.App {
-  text-align: center;
-}
-
 .MapContainer {
-  height: 1000px;
-  width: 1000px;
+  height: 800px;
+  width: 100%;
 }
