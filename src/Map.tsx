@@ -9,7 +9,7 @@ type MapProps = {
 function Map({ campsites }:MapProps) {
   const campsiteMarkers = campsites.map(campsite => {
     return (
-      <Marker position={[campsite.location.lat, campsite.location.long]}>
+      <Marker key={campsite.title} position={[campsite.location.lat, campsite.location.long]}>
         <Popup>
           <h3>{campsite.title}</h3>
           <a href={campsite.detailsLink} target="_blank" rel="noreferrer">Site Details</a>
