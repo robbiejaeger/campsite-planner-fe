@@ -21,26 +21,26 @@ function App() {
 
   return (
     <>
-    <AppBar sx={{ mb: 2 }} position="static">
-      <Toolbar>
-        <h1>RMNP Campsite Planner</h1>
-      </Toolbar>
-    </AppBar>
+      <AppBar sx={{ mb: 2 }} position="static">
+        <Toolbar>
+          <h1>RMNP Campsite Planner</h1>
+        </Toolbar>
+      </AppBar>
 
-    <Container maxWidth="xl">
-      <Grid container spacing={2}>
-        <Grid item xs={3}>
-          <Box sx={{ border: 1, p: 2 }}>
-            <h3>Bookings...</h3>
-          </Box>
+      <Container maxWidth="xl">
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <Box sx={{ border: 1, p: 2 }}>
+              <h3>Itinerary</h3>
+            </Box>
+          </Grid>
+          <Grid item xs={9}>
+            <Box sx={{ border: 1, p: 2 }}>
+              <Map campsites={campsites}/>
+            </Box>
+          </Grid>
         </Grid>
-        <Grid item xs={9}>
-          <Box sx={{ border: 1, p: 2 }}>
-            <Map campsites={campsites}/>
-          </Box>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
     </>
   );
 }
