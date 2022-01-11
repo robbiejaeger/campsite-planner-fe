@@ -1,11 +1,12 @@
 export interface Location {
-  lat: string,
-  long: string
+  lat: number,
+  long: number
 }
 
 export interface Campsite {
   title: string,
   location: Location,
-  datesAvailable: [string],
-  elevation: string
+  datesAvailable: string[],
+  elevation: string,
+  detailsLink: string
 }
