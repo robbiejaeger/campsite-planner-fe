@@ -4,6 +4,9 @@ import Map from './Map';
 import { Campsite } from './Models';
 import { getCampsites } from './apiCalls';
 
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+
 function App() {
   const [campsites, setCampsites] = useState<Array<Campsite>>([]);
 
@@ -14,11 +17,18 @@ function App() {
   }, []);
 
   return (
-    <main className="App">
+    <Container className="App">
       <h1>RMNP Campsite Planner</h1>
 
-      <Map campsites={campsites}/>
-    </main>
+      <Grid container spacing={2}>
+        <Grid item xs={3}>
+          <h3>Bookings...</h3>
+        </Grid>
+        <Grid item xs={9}>
+          <Map campsites={campsites}/>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
