@@ -4,6 +4,8 @@ import Map from './Map';
 import { Campsite } from './Models';
 import { getCampsites } from './apiCalls';
 
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { Box } from '@mui/system';
@@ -18,9 +20,14 @@ function App() {
   }, []);
 
   return (
-    <Container maxWidth="xl">
-      <h1>RMNP Campsite Planner</h1>
+    <>
+    <AppBar sx={{ mb: 2 }} position="static">
+      <Toolbar>
+        <h1>RMNP Campsite Planner</h1>
+      </Toolbar>
+    </AppBar>
 
+    <Container maxWidth="xl">
       <Grid container spacing={2}>
         <Grid item xs={3}>
           <Box sx={{ border: 1, p: 2 }}>
@@ -34,6 +41,7 @@ function App() {
         </Grid>
       </Grid>
     </Container>
+    </>
   );
 }
 
