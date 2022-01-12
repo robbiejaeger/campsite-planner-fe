@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Dayjs } from 'dayjs';
 
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
@@ -8,8 +9,8 @@ import DateAdapter from '@mui/lab/AdapterDayjs';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
 function Itinerary() {
-  const [firstNight, setFirstNight] = useState(null);
-  const [lastNight, setLastNight] = useState(null);
+  const [firstNight, setFirstNight] = useState<null | Dayjs>(null);
+  const [lastNight, setLastNight] = useState<null | Dayjs>(null);
 
   return (
     <Paper elevation={2}>
