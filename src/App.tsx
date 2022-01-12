@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Map from './Map';
+import Itinerary from './Itinerary';
 import { Campsite } from './Models';
 import { getCampsites } from './apiCalls';
 
@@ -33,11 +34,7 @@ function App() {
       <Container maxWidth="xl">
         <Grid container spacing={2}>
           <Grid item xs={4}>
-            <Paper elevation={2}>
-              <Typography variant="h4">
-                Itinerary
-              </Typography>
-            </Paper>
+            <Itinerary />
           </Grid>
           <Grid item xs={8}>
             <Paper elevation={2}>
