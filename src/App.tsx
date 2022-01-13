@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Map from './Map';
+import Itinerary from './Itinerary';
 import { Campsite } from './Models';
 import { getCampsites } from './apiCalls';
 
@@ -8,7 +9,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import { Box } from '@mui/system';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 
 function App() {
   const [campsites, setCampsites] = useState<Array<Campsite>>([]);
@@ -23,21 +25,21 @@ function App() {
     <>
       <AppBar sx={{ mb: 2 }} position="static">
         <Toolbar>
-          <h1>RMNP Campsite Planner</h1>
+          <Typography variant="h3" component="h1">
+            RMNP Campsite Planner
+          </Typography>
         </Toolbar>
       </AppBar>
 
       <Container maxWidth="xl">
         <Grid container spacing={2}>
-          <Grid item xs={3}>
-            <Box sx={{ border: 1, p: 2 }}>
-              <h3>Itinerary</h3>
-            </Box>
+          <Grid item xs={4}>
+            <Itinerary />
           </Grid>
-          <Grid item xs={9}>
-            <Box sx={{ border: 1, p: 2 }}>
+          <Grid item xs={8}>
+            <Paper elevation={2}>
               <Map campsites={campsites}/>
-            </Box>
+            </Paper>
           </Grid>
         </Grid>
       </Container>

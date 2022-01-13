@@ -19,10 +19,10 @@ function Map({ campsites }:MapProps) {
   });
 
   return (
-    <MapContainer className="MapContainer" center={[40.3428, -105.6836]} zoom={11} scrollWheelZoom={false}>
+    <MapContainer className="MapContainer" maxZoom={16} center={[40.3428, -105.6836]} zoom={11} scrollWheelZoom={false}>
       <TileLayer
-        attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-        url="https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png"
+        attribution='Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+        url="https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}"
       />
       {campsiteMarkers}
     </MapContainer>
