@@ -12,14 +12,13 @@ function Map({ campsites }:MapProps) {
       <Marker key={campsite.title} position={[campsite.location.lat, campsite.location.long]}>
         <Popup>
           <h3>{campsite.title}</h3>
-          <a href={campsite.detailsLink} target="_blank" rel="noreferrer">Site Details</a>
         </Popup>
       </Marker>
     )
   });
 
   return (
-    <MapContainer className="MapContainer" maxZoom={16} center={[40.3428, -105.6836]} zoom={11} scrollWheelZoom={false}>
+    <MapContainer className="MapContainer" maxZoom={16} center={[40.3658, -105.6836]} zoom={11} scrollWheelZoom={false}>
       <TileLayer
         attribution='Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
         url="https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}"
